@@ -349,6 +349,7 @@ public void Start(View view) {
     // Tube_Array_Choice_Int=Integer.valueOf(Tube_Array_Choice.getText()toString));
     // Sel_Letter = r.getStringArray(Tube_Array_Choice_Int);
     Tile = items[randomNum6];
+
     text_16.setText(Tile);
     randomNum4 = rand.nextInt(3 - 0 + 1); //creates random angle for displayed letter
     Angle = Top_1[randomNum4]; //chooses from 4 options
