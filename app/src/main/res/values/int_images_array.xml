@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="int_images_array">
+
+        <item>R.drawable.a1</item>
+        <item>R.drawable.b</item>
+        <item>"R.drawable.c"</item>
+        <item>R.drawable.d</item>
+        <item>"R.drawable.e"</item>
+        <item>"R.drawable.f"</item>
+
+
+
+
+
+    </array>
+
+
+</resources>

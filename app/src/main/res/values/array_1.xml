@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_1">
+
+        <item>"a1.png"</item>
+        <item>"b.png""</item>
+        <item>"c.png""</item>
+        <item>"d.png"</item>
+        <item>"e.png"</item>
+        <item>"f.png"</item>
+
+
+
+
+    </string-array>
+
+
+</resources>
