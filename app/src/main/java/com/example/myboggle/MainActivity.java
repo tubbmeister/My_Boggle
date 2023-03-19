@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     String Angle,Tile,Tube_Array_Choice;
     //ImageView imageview;
     Integer Cube_Number,Tube_Array_Choice_Int;
-    TextView text_13,text_1;
+    TextView text_13,text_1,text_2;
     int[] Sel_Cube;//array of int
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
        // imageview=findViewById(R.id.Second_Cube);
         text_1=findViewById(R.id.Cube_1);
+        text_2=findViewById(R.id.Cube_2);
         text_13=findViewById(R.id.Cube_13);
         //Display_Angle=R.getStringArray(R.array.Display_Angle);
     }
@@ -76,6 +77,24 @@ public void Start(View view) {
     Angle = Top_1[randomNum4]; //chooses from 4 options
     tempFloat = Float.parseFloat(Angle);
     text_1.setRotation(tempFloat);
+
+    //next cube along from top left
+
+    Cube_Number = list.get(1); //extract number for next cube position (top left)
+    //if (Cube_Number==1){
+    Sel_Letter = r.getStringArray(R.array.cube_arrays);
+    Tube_Array_Choice = Sel_Letter[Cube_Number];
+     arrayName_ID= getResources().getIdentifier(Tube_Array_Choice , "array",this.getPackageName());
+
+    items = getResources().getStringArray(arrayName_ID);
+
+    // Tube_Array_Choice_Int=Integer.valueOf(Tube_Array_Choice.getText()toString));
+    // Sel_Letter = r.getStringArray(Tube_Array_Choice_Int);
+    Tile = items[randomNum6];
+    text_2.setText(Tile);
+    Angle = Top_1[randomNum4]; //chooses from 4 options
+    tempFloat = Float.parseFloat(Angle);
+    text_2.setRotation(tempFloat);
 
 
    
