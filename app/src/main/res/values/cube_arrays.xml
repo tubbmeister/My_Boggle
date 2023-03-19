@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cube_arrays">
+
+        <item>"first_cube"</item>
+        <item>"second_cube"</item>
+        <item>"third_cube"</item>
+        <item>"forth_cube"</item>
+        <item>"fifth_cube"</item>
+        <item>"sixth_cube"</item>
+        <item>"seventh_cube"</item>
+        <item>"eighth_cube"</item>
+        <item>"nineth_cube"</item>
+        <item>"tenth_cube"</item>
+        <item>"eleventh_cube"</item>
+        <item>"twelth_cube"</item>
+        <item>"thirteenth_cube"</item>
+        <item>"forteenth_cube"</item>
+        <item>"fifteenth_cube"</item>
+        <item>"sixteenth_cube"</item>
+
+    </string-array>
+
+
+</resources>
