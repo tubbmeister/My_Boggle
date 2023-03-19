@@ -7,6 +7,7 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Random;
 import java.util.Arrays;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
    String[] Display_Angle,Top_1;
     String Angle,Tile;
     ImageView imageview;
+    TextView text_13;
     int[] Sel_Image;//array of int
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imageview=findViewById(R.id.Second_Cube);
+        text_13=findViewById(R.id.Cube_13);
         //Display_Angle=R.getStringArray(R.array.Display_Angle);
     }
 
@@ -45,6 +48,8 @@ int choice = (int)(Math.random()*Tiles.length());
 imageview.setImageResource(Tiles.getResourceId(choice,R.drawable.a1));
 imageview.setRotation(tempFloat);
 
+text_13.setText(" C");
+text_13.setRotation(tempFloat);
     }
 public void Stop(View view){
         System.exit(0);

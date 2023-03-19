@@ -362,14 +362,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/First_Cube"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+
+                <TextView
+                    android:id="@+id/Cube_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/orwell" />
-
-
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:text=" B"
+                    android:textSize="70dp" />
             </RelativeLayout>
 
 
