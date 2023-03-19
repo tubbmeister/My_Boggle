@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sixteenth_cube">
+
+        <item>" P"</item>
+        <item>" A""</item>
+        <item>" C""</item>
+        <item>" E"</item>
+        <item>" M"</item>
+        <item>" D"</item>
+
+
+
+
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="forth_cube">
+
+        <item>" U"</item>
+        <item>" T""</item>
+        <item>" O""</item>
+        <item>" K"</item>
+        <item>" N"</item>
+        <item>" D"</item>
+
+
+
+
+    </string-array>
+
+
+</resources>

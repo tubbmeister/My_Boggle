@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fifteenth_cube">
+
+        <item>" U"</item>
+        <item>" W""</item>
+        <item>" I""</item>
+        <item>" L"</item>
+        <item>" R"</item>
+        <item>" G"</item>
+
+
+
+
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fifth_cube">
+
+        <item>" H"</item>
+        <item>" M""</item>
+        <item>" S""</item>
+        <item>" R"</item>
+        <item>" A"</item>
+        <item>" O"</item>
+
+
+
+
+    </string-array>
+
+
+</resources>

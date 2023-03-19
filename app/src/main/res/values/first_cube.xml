@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="first_cube">
+
+        <item>" R"</item>
+        <item>" I""</item>
+        <item>" F""</item>
+        <item>" O"</item>
+        <item>" B"</item>
+        <item>" X"</item>
+
+
+
+
+    </string-array>
+
+
+</resources>

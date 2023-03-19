@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="third_cube">
+
+        <item>" D"</item>
+        <item>" E""</item>
+        <item>" N""</item>
+        <item>" O"</item>
+        <item>" W"</item>
+        <item>" S"</item>
+
+
+
+
+    </string-array>
+
+
+</resources>

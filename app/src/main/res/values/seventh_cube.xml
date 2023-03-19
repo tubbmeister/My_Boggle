@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="seventh_cube">
+
+        <item>" A"</item>
+        <item>" C""</item>
+        <item>" I""</item>
+        <item>" T"</item>
+        <item>" O"</item>
+        <item>" A"</item>
+
+
+
+
+    </string-array>
+
+
+</resources>
