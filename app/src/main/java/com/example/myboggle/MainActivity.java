@@ -41,7 +41,7 @@ public void Start(View view) {
     TypedArray Tiles = getResources().obtainTypedArray(R.array.image_array); //get array with tiles in
     Random rand = new Random();
     int randomNum4 = rand.nextInt(3 - 0 + 1); //creates random angle for displayed letter
-    int randomNum6 = rand.nextInt(6 - 0 + 1); //creates random angle for displayed letter
+    int randomNum6 = rand.nextInt(5 ); //creates random angle for displayed letter
     Top_1 = r.getStringArray(R.array.Display_Angle);
     Angle = Top_1[randomNum4]; //chooses from 4 options
     float tempFloat = Float.parseFloat(Angle);
@@ -60,7 +60,7 @@ public void Start(View view) {
   //  text_13.setText(Tile);
   //  text_13.setRotation(tempFloat);
     List<Integer> list = new ArrayList<Integer>();
-    for (int i = 1; i < 17; i++) list.add(i);
+    for (int i = 0; i < 16; i++) list.add(i);
     Collections.shuffle(list);
     Cube_Number = list.get(0); //extract number for first cube position (top left)
     //if (Cube_Number==1){
@@ -92,6 +92,7 @@ public void Start(View view) {
     // Sel_Letter = r.getStringArray(Tube_Array_Choice_Int);
     Tile = items[randomNum6];
     text_2.setText(Tile);
+     randomNum4 = rand.nextInt(3 - 0 + 1); //creates random angle for displayed letter
     Angle = Top_1[randomNum4]; //chooses from 4 options
     tempFloat = Float.parseFloat(Angle);
     text_2.setRotation(tempFloat);
