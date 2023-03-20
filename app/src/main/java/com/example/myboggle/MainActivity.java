@@ -56,11 +56,11 @@ public void Start(View view) {
     new CountDownTimer(30000, 1000) {
 
         public void onTick(long millisUntilFinished) {
-            mTextField.setText("seconds remaining: " + millisUntilFinished / 1000);
+            mTextField.setText("Seconds remaining: " + millisUntilFinished / 1000);
         }
 
         public void onFinish() {
-            mTextField.setText("done!");
+            mTextField.setText("Done!");
         }
     }.start();
 
