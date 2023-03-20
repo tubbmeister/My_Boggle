@@ -40,12 +40,12 @@
 
                 <TextView
                     android:id="@+id/Cube_1"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" D"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
 
@@ -71,12 +71,12 @@
 
                 <TextView
                     android:id="@+id/Cube_2"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" a"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
 
@@ -102,14 +102,14 @@
 
                 <TextView
                     android:id="@+id/Cube_3"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" d"
                     android:textColor="@color/black"
-                    android:textSize="60dp"/>
+                    android:textSize="60dp" />
 
 
 
@@ -134,12 +134,12 @@
 
                 <TextView
                     android:id="@+id/Cube_4"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" "
                     android:textColor="@color/black"
                     android:textSize="60dp" />
 
@@ -166,12 +166,12 @@
 
                 <TextView
                     android:id="@+id/Cube_5"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" "
                     android:textColor="@color/black"
                     android:textSize="60dp" />
 
@@ -198,12 +198,12 @@
 
                 <TextView
                     android:id="@+id/Cube_6"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" i"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
 
@@ -230,14 +230,14 @@
 
                 <TextView
                     android:id="@+id/Cube_7"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" s"
                     android:textColor="@color/black"
-                    android:textSize="60dp"/>
+                    android:textSize="60dp" />
 
 
 
@@ -262,14 +262,14 @@
 
                 <TextView
                     android:id="@+id/Cube_8"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" "
                     android:textColor="@color/black"
-                    android:textSize="60dp"/>
+                    android:textSize="60dp" />
 
 
 
@@ -294,12 +294,12 @@
 
                 <TextView
                     android:id="@+id/Cube_9"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" t"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
 
@@ -326,12 +326,12 @@
 
                 <TextView
                     android:id="@+id/Cube_10"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" h"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
 
@@ -358,12 +358,12 @@
 
                 <TextView
                     android:id="@+id/Cube_11"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" e"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
 
@@ -390,14 +390,14 @@
 
                 <TextView
                     android:id="@+id/Cube_12"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" "
                     android:textColor="@color/black"
-                    android:textSize="60dp"/>
+                    android:textSize="60dp" />
 
 
 
@@ -423,11 +423,11 @@
 
                 <TextView
                     android:id="@+id/Cube_13"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
+                    android:fontFamily="@font/solway_bold"
                     android:text=" B"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
@@ -452,12 +452,12 @@
 
                 <TextView
                     android:id="@+id/Cube_14"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" E"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
 
@@ -484,12 +484,12 @@
 
                 <TextView
                     android:id="@+id/Cube_15"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" S"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
 
@@ -516,12 +516,12 @@
 
                 <TextView
                     android:id="@+id/Cube_16"
-                    android:fontFamily="@font/solway_bold"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:background="@color/white"
-                    android:text=" B"
+                    android:fontFamily="@font/solway_bold"
+                    android:text=" T"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
 
