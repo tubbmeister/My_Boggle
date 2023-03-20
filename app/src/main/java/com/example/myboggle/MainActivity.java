@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     String Angle,Tile,Tube_Array_Choice;
     //ImageView imageview;
     Integer Cube_Number,Tube_Array_Choice_Int;
-    TextView text_13,text_1,text_2,text_3,text_4,text_5,text_6,text_7,text_8,text_9,text_10,text_11,text_12,text_14,text_15,text_16;
+    TextView text_13,text_1,text_2,text_3,text_4,text_5,text_6,text_7,text_8,text_9,text_10,text_11,text_12,text_14,text_15,text_16,mTextField;
     int[] Sel_Cube;//array of int
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
        // imageview=findViewById(R.id.Second_Cube);
+        mTextField=findViewById(R.id.mTextField);
         text_1=findViewById(R.id.Cube_1);
         text_2=findViewById(R.id.Cube_2);
         text_3=findViewById(R.id.Cube_3);
@@ -50,6 +52,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
 public void Start(View view) {
+
+    new CountDownTimer(30000, 1000) {
+
+        public void onTick(long millisUntilFinished) {
+            mTextField.setText("seconds remaining: " + millisUntilFinished / 1000);
+        }
+
+        public void onFinish() {
+            mTextField.setText("done!");
+        }
+    }.start();
+
+
+
     Resources r = getResources(); //allows arrays to be loaded
     TypedArray Tiles = getResources().obtainTypedArray(R.array.image_array); //get array with tiles in
     Random rand = new Random();
