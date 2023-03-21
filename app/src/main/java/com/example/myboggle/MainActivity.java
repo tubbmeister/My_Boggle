@@ -452,14 +452,16 @@ public void Countdown(){
     new CountDownTimer(12000, 1000) {
 
         public void onTick(long millisUntilFinished) {
-            mTextField.setText( millisUntilFinished / 1000+" seconds remaining: ");
+            mTextField.setText( millisUntilFinished / 1000+" seconds remaining");
             if(millisUntilFinished<6000){
 
-                textView.setText("5 seconds!");
-                if(millisUntilFinished<1000){
-                    MediaPlayer music = MediaPlayer.create(MainActivity.this, R.raw.wmgoal);
-                    music.start();
+                //textView.setText("5 seconds!");
+                if(mTextField.getText().toString().equals("5 seconds remaining")){
+                MediaPlayer music = MediaPlayer.create(MainActivity.this, R.raw.beep_beep);
+
+                music.start();
                 }
+
             }
         }
 
