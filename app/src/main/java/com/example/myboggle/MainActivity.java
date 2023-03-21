@@ -4,24 +4,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
-   String[] Display_Angle,Top_1,Sel_Letter,items;
+    float tempFloat;
+
+    String[] Display_Angle,Top_1,Sel_Letter,items;
     String Angle,Tile,Tube_Array_Choice;
     ArrayList<Integer> list;
     //ImageView imageview;
     Integer Cube_Number,Tube_Array_Choice_Int,j,arrayName_ID;
-    TextView text_13,text_1,text_2,text_3,text_4,text_5,text_6,text_7,text_8,text_9,text_10,text_11,text_12,text_14,text_15,text_16,mTextField;
+    TextView textView,text_13,text_1,text_2,text_3,text_4,text_5,text_6,text_7,text_8,text_9,text_10,text_11,text_12,text_14,text_15,text_16,mTextField;
     int[] Sel_Cube;//array of int
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         text_14=findViewById(R.id.Cube_14);
         text_15=findViewById(R.id.Cube_15);
         text_16=findViewById(R.id.Cube_16);
+        textView=findViewById(R.id.textView);
         //Display_Angle=R.getStringArray(R.array.Display_Angle);
     }
 
@@ -61,7 +68,7 @@ public void Start(View view) {
     int randomNum6 = rand.nextInt(5); //creates random angle for displayed letter
     Top_1 = r.getStringArray(R.array.Display_Angle);
     Angle = Top_1[randomNum4]; //chooses from 4 options
-    float tempFloat = Float.parseFloat(Angle);
+     tempFloat = Float.parseFloat(Angle);
 //Sel_Image=r.getIntArray(R.array.i); //get image filename from the array
 //Tile=Sel_Image[randomNum6] ; //chooses from 6 options
     // Tile="R.drawable.a1";
@@ -363,26 +370,20 @@ public void Start(View view) {
 
 
 
-    new CountDownTimer(30000, 1000) {
 
-        public void onTick(long millisUntilFinished) {
-            mTextField.setText( millisUntilFinished / 1000+" seconds remaining: ");
-        }
-
-        public void onFinish() {
-            mTextField.setText("Done!");
-        }
-    }.start();
     }
 
 public String myMethod(int Selected_Array, int j){
     Resources r = getResources(); //allows arrays to be loaded
+    list = new ArrayList<Integer>();
+    for (int i = 0; i < 16; i++) list.add(i);
+    Collections.shuffle(list); //randomizes the 16 numbers in the list
 
 
     Cube_Number = list.get(j); //extract number for next cube position (top left)//j is number to iterate through all 16 cubes
     //if (Cube_Number==1){
     Sel_Letter = r.getStringArray(R.array.cube_arrays);
-    Tube_Array_Choice = Sel_Letter[Cube_Number];
+    Tube_Array_Choice = Sel_Letter[Selected_Array];
     arrayName_ID = getResources().getIdentifier(Tube_Array_Choice, "array", this.getPackageName());
 
     items = getResources().getStringArray(arrayName_ID);
@@ -392,24 +393,83 @@ public String myMethod(int Selected_Array, int j){
     Random rand1 = new Random();
     int randomNum6 = rand1.nextInt(5); //creates random angle for displayed letter
     Tile = items[randomNum6];
+    text_16.setText(Tile);
+    int randomNum4 = rand1.nextInt(3 - 0 + 1); //creates random angle for displayed letter
+    Top_1 = r.getStringArray(R.array.Display_Angle);
+    Angle = Top_1[randomNum4]; //chooses from 4 options
+    tempFloat = Float.parseFloat(Angle);
+    text_16.setRotation(tempFloat);
 return Tile;
 }
 
 
-    public void onPress(View v) {
+    public void onPress() {
 
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
+
+
             public void run() {
-myMethod(5,5);
+
+
+                    myMethod(5, 5);
             }
         }, 2000);
-    }
-    public void Stop(View view){
-        System.exit(0);
+}
+
+        public void Stop (View view){
+            System.exit(0);
+        }
+public void Looper(View view){
+        textView.setText("");
+
+    Timer timer = new Timer();
+    int begin = 0;
+    int timeInterval = 100;
+    timer.schedule(new TimerTask() {
+        int counter = 0;
+        @Override
+        public void run() {
+
+            // myMethod(5, 5);;
+            Start(null);
+            counter++;
+            if (counter >= 10) {
+                timer.cancel();
+
+            }
+
+        }
+
+    }, begin, timeInterval);
+Countdown();
+}
+public void Countdown(){
+
+
+    new CountDownTimer(12000, 1000) {
+
+        public void onTick(long millisUntilFinished) {
+            mTextField.setText( millisUntilFinished / 1000+" seconds remaining: ");
+            if(millisUntilFinished<6000){
+
+                textView.setText("5 seconds!");
+                if(millisUntilFinished<1000){
+                    MediaPlayer music = MediaPlayer.create(MainActivity.this, R.raw.wmgoal);
+                    music.start();
+                }
+            }
+        }
+
+        public void onFinish() {
+            mTextField.setText("Done!");
+
+        }
+    }.start();
 }
 
 
 }
+
