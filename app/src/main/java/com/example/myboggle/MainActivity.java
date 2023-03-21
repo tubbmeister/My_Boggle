@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.TextView;
 
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Integer> list;
     //ImageView imageview;
     Integer Cube_Number,Tube_Array_Choice_Int,j,arrayName_ID;
-    TextView text_13,text_1,text_2,text_3,text_4,text_5,text_6,text_7,text_8,text_9,text_10,text_11,text_12,text_14,text_15,text_16,mTextField;
+    TextView textView,text_13,text_1,text_2,text_3,text_4,text_5,text_6,text_7,text_8,text_9,text_10,text_11,text_12,text_14,text_15,text_16,mTextField;
     int[] Sel_Cube;//array of int
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         text_14=findViewById(R.id.Cube_14);
         text_15=findViewById(R.id.Cube_15);
         text_16=findViewById(R.id.Cube_16);
+        textView=findViewById(R.id.textView);
         //Display_Angle=R.getStringArray(R.array.Display_Angle);
     }
 
@@ -367,16 +370,7 @@ public void Start(View view) {
 
 
 
-    new CountDownTimer(30000, 1000) {
 
-        public void onTick(long millisUntilFinished) {
-            mTextField.setText( millisUntilFinished / 1000+" seconds remaining: ");
-        }
-
-        public void onFinish() {
-            mTextField.setText("Done!");
-        }
-    }.start();
     }
 
 public String myMethod(int Selected_Array, int j){
@@ -389,7 +383,7 @@ public String myMethod(int Selected_Array, int j){
     Cube_Number = list.get(j); //extract number for next cube position (top left)//j is number to iterate through all 16 cubes
     //if (Cube_Number==1){
     Sel_Letter = r.getStringArray(R.array.cube_arrays);
-    Tube_Array_Choice = Sel_Letter[Cube_Number];
+    Tube_Array_Choice = Sel_Letter[Selected_Array];
     arrayName_ID = getResources().getIdentifier(Tube_Array_Choice, "array", this.getPackageName());
 
     items = getResources().getStringArray(arrayName_ID);
@@ -429,6 +423,7 @@ return Tile;
             System.exit(0);
         }
 public void Looper(View view){
+        textView.setText("");
 
     Timer timer = new Timer();
     int begin = 0;
@@ -437,15 +432,44 @@ public void Looper(View view){
         int counter = 0;
         @Override
         public void run() {
-            myMethod(5, 5);;
+
+            // myMethod(5, 5);;
+            Start(null);
             counter++;
-            if (counter >= 20){
+            if (counter >= 10) {
                 timer.cancel();
+
+            }
+
+        }
+
+    }, begin, timeInterval);
+Countdown();
+}
+public void Countdown(){
+
+
+    new CountDownTimer(12000, 1000) {
+
+        public void onTick(long millisUntilFinished) {
+            mTextField.setText( millisUntilFinished / 1000+" seconds remaining: ");
+            if(millisUntilFinished<6000){
+
+                textView.setText("5 seconds!");
+                if(millisUntilFinished<1000){
+                    MediaPlayer music = MediaPlayer.create(MainActivity.this, R.raw.wmgoal);
+                    music.start();
+                }
             }
         }
-    }, begin, timeInterval);
 
+        public void onFinish() {
+            mTextField.setText("Done!");
 
+        }
+    }.start();
 }
+
+
 }
 
