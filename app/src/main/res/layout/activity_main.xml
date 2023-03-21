@@ -35,8 +35,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/Cube_1"
@@ -112,7 +111,6 @@
                     android:textSize="60dp" />
 
 
-
             </RelativeLayout>
 
 
@@ -142,7 +140,6 @@
                     android:text=" "
                     android:textColor="@color/black"
                     android:textSize="60dp" />
-
 
 
             </RelativeLayout>
@@ -176,7 +173,6 @@
                     android:textSize="60dp" />
 
 
-
             </RelativeLayout>
 
 
@@ -206,7 +202,6 @@
                     android:text=" i"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
-
 
 
             </RelativeLayout>
@@ -240,7 +235,6 @@
                     android:textSize="60dp" />
 
 
-
             </RelativeLayout>
 
 
@@ -270,7 +264,6 @@
                     android:text=" "
                     android:textColor="@color/black"
                     android:textSize="60dp" />
-
 
 
             </RelativeLayout>
@@ -304,7 +297,6 @@
                     android:textSize="60dp" />
 
 
-
             </RelativeLayout>
 
 
@@ -334,7 +326,6 @@
                     android:text=" h"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
-
 
 
             </RelativeLayout>
@@ -368,7 +359,6 @@
                     android:textSize="60dp" />
 
 
-
             </RelativeLayout>
 
 
@@ -398,7 +388,6 @@
                     android:text=" "
                     android:textColor="@color/black"
                     android:textSize="60dp" />
-
 
 
             </RelativeLayout>
@@ -462,7 +451,6 @@
                     android:textSize="60dp" />
 
 
-
             </RelativeLayout>
 
 
@@ -492,7 +480,6 @@
                     android:text=" S"
                     android:textColor="@color/black"
                     android:textSize="60dp" />
-
 
 
             </RelativeLayout>
@@ -569,6 +556,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Stop" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Looper"
+        android:text="Test"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
