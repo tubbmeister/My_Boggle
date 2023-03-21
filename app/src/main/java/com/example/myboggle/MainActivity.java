@@ -449,7 +449,7 @@ Countdown();
 public void Countdown(){
 
 
-    new CountDownTimer(12000, 1000) {
+    new CountDownTimer(62000, 1000) {
 
         public void onTick(long millisUntilFinished) {
             mTextField.setText( millisUntilFinished / 1000+" seconds remaining");

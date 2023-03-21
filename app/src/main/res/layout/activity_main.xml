@@ -563,6 +563,7 @@
         android:layout_height="wrap_content"
         android:onClick="Looper"
         android:text="Test"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button" />
