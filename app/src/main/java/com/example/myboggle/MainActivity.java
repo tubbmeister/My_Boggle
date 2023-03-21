@@ -2,24 +2,17 @@ package com.example.myboggle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
-import android.os.Looper;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Random;
-import java.util.Arrays;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -382,7 +375,7 @@ public void Start(View view) {
     }.start();
     }
 
-public void myMethod(int Selected_Array){
+public String myMethod(int Selected_Array, int j){
     Resources r = getResources(); //allows arrays to be loaded
 
 
@@ -399,10 +392,21 @@ public void myMethod(int Selected_Array){
     Random rand1 = new Random();
     int randomNum6 = rand1.nextInt(5); //creates random angle for displayed letter
     Tile = items[randomNum6];
-
+return Tile;
 }
 
 
+    public void onPress(View v) {
+
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+myMethod(5,5);
+            }
+        }, 2000);
+    }
     public void Stop(View view){
         System.exit(0);
 }
