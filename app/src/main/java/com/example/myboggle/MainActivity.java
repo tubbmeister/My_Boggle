@@ -10,6 +10,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -21,7 +22,9 @@ import java.util.TimerTask;
 public class MainActivity extends AppCompatActivity {
 
     float tempFloat;
-
+private ProgressBar progressBar;
+private TextView progressText;
+int kk=100;
     String[] Display_Angle,Top_1,Sel_Letter,items;
     String Angle,Tile,Tube_Array_Choice;
     ArrayList<Integer> list;
@@ -53,8 +56,36 @@ public class MainActivity extends AppCompatActivity {
         text_15=findViewById(R.id.Cube_15);
         text_16=findViewById(R.id.Cube_16);
         textView=findViewById(R.id.textView);
-        //Display_Angle=R.getStringArray(R.array.Display_Angle);
-    }
+
+        progressBar=findViewById(R.id.progress_bar);
+        progressText=findViewById(R.id.progress_text);
+
+
+
+
+            final Handler handler1=new Handler();
+            handler1.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // set the limitations for the numeric
+                    // text under the progress bar
+                    if (kk >= 0) {
+                        progressText.setText("" + kk);
+                        progressBar.setProgress(kk);
+                        kk--;
+                        handler1.postDelayed(this, 200);
+                    } else {
+                        handler1.removeCallbacks(this);
+                    }
+                }
+            }, 200);
+                }
+
+
+
+
+
+
 
 public void Start(View view) {
 
