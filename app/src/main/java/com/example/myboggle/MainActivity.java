@@ -2,6 +2,7 @@ package com.example.myboggle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.media.MediaPlayer;
@@ -10,6 +11,8 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,12 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
     float tempFloat;
     ImageView imageView;
+    EditText editText;
 
     String[] Display_Angle,Top_1,Sel_Letter,items;
     String Angle,Tile,Tube_Array_Choice;
     ArrayList<Integer> list;
     //ImageView imageview;
-    Integer Cube_Number,Tube_Array_Choice_Int,j,arrayName_ID;
+    Integer Cube_Number,Tube_Array_Choice_Int,j,arrayName_ID,LengthofGame;
     TextView textView,text_13,text_1,text_2,text_3,text_4,text_5,text_6,text_7,text_8,text_9,text_10,text_11,text_12,text_14,text_15,text_16,mTextField;
     int[] Sel_Cube;//array of int
     @Override
@@ -38,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
        // imageview=findViewById(R.id.Second_Cube);
         imageView=findViewById(R.id.imageView);
+        editText=findViewById(R.id.editTextNumber);
         mTextField=findViewById(R.id.mTextField);
         text_1=findViewById(R.id.Cube_1);
         text_2=findViewById(R.id.Cube_2);
@@ -442,9 +447,24 @@ return Tile;
         }
 public void Looper(View view){
        // textView.setText("");
+
 imageView.setVisibility(View.INVISIBLE);
+    String value= editText.getText().toString();
+
+if (value.equals("")){
+    LengthofGame=62000;
+}
+else {int finalValue=Integer.parseInt(value);
+    finalValue=(finalValue*1000)+2000;
+    LengthofGame=finalValue;
 
 
+}
+    InputMethodManager inputManager = (InputMethodManager)
+            getSystemService(Context.INPUT_METHOD_SERVICE);
+
+    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+    imm.hideSoftInputFromWindow(view.getWindowToken(), 0); //deletes keyboard
 
     Timer timer = new Timer();
     int begin = 0;
@@ -470,7 +490,7 @@ Countdown();
 public void Countdown(){
 
 
-    new CountDownTimer(62000, 1000) {
+    new CountDownTimer(LengthofGame, 1000) {
 
         public void onTick(long millisUntilFinished) {
             mTextField.setText( millisUntilFinished / 1000+" seconds remaining");

@@ -579,5 +579,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/aef_small" />
 
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="125dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:text="60"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="119dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:text="Game length in seconds"
+
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
