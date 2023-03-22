@@ -10,6 +10,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ import java.util.TimerTask;
 public class MainActivity extends AppCompatActivity {
 
     float tempFloat;
+    ImageView imageView;
 
     String[] Display_Angle,Top_1,Sel_Letter,items;
     String Angle,Tile,Tube_Array_Choice;
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
        // imageview=findViewById(R.id.Second_Cube);
+        imageView=findViewById(R.id.imageView);
         mTextField=findViewById(R.id.mTextField);
         text_1=findViewById(R.id.Cube_1);
         text_2=findViewById(R.id.Cube_2);
@@ -52,11 +55,12 @@ public class MainActivity extends AppCompatActivity {
         text_14=findViewById(R.id.Cube_14);
         text_15=findViewById(R.id.Cube_15);
         text_16=findViewById(R.id.Cube_16);
-        textView=findViewById(R.id.textView);
+        //textView=findViewById(R.id.textView);
         //Display_Angle=R.getStringArray(R.array.Display_Angle);
-    }
+           }
 
 public void Start(View view) {
+
 
     Resources r = getResources(); //allows arrays to be loaded
 
@@ -424,6 +428,9 @@ return Tile;
         }
 public void Looper(View view){
         textView.setText("");
+imageView.setVisibility(View.INVISIBLE);
+
+
 
     Timer timer = new Timer();
     int begin = 0;
