@@ -524,7 +524,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="Start"
+        android:onClick="Looper"
         android:backgroundTint="#8bbe1b"
         android:text="Start!"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout"
@@ -563,6 +563,7 @@
         android:layout_height="wrap_content"
         android:onClick="Looper"
         android:text="Test"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button" />
@@ -574,6 +575,7 @@
         android:layout_marginEnd="28dp"
         android:backgroundTint="@color/black"
         android:text="TextView"
+        android:visibility="invisible"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintEnd_toStartOf="@+id/button" />
