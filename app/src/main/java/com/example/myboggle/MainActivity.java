@@ -57,7 +57,21 @@ public class MainActivity extends AppCompatActivity {
         text_16=findViewById(R.id.Cube_16);
         //textView=findViewById(R.id.textView);
         //Display_Angle=R.getStringArray(R.array.Display_Angle);
-           }
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+
+
+            public void run() {
+
+imageView.setVisibility(View.INVISIBLE);
+               // myMethod(5, 5);
+            }
+        }, 5000);
+
+
+    }
 
 public void Start(View view) {
 
@@ -427,7 +441,7 @@ return Tile;
             System.exit(0);
         }
 public void Looper(View view){
-        textView.setText("");
+       // textView.setText("");
 imageView.setVisibility(View.INVISIBLE);
 
 
