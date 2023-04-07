@@ -87,8 +87,8 @@ public void Start(View view) {
 
     TypedArray Tiles = getResources().obtainTypedArray(R.array.image_array); //get array with tiles in
     Random rand = new Random();
-    int randomNum4 = rand.nextInt(3 - 0 + 1); //creates random angle for displayed letter
-    int randomNum6 = rand.nextInt(5); //creates random angle for displayed letter
+    int randomNum4 = rand.nextInt((3 - 0) + 1); //creates random angle for displayed letter
+    int randomNum6 = rand.nextInt((5-0)+1); //creates random angle for displayed letter
     Top_1 = r.getStringArray(R.array.Display_Angle);
     Angle = Top_1[randomNum4]; //chooses from 4 options
      tempFloat = Float.parseFloat(Angle);
